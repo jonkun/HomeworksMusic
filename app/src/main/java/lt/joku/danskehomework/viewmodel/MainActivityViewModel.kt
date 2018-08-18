@@ -23,7 +23,7 @@ class MainActivityViewModel : ViewModel() {
     var showProgressBar = MutableLiveData<Int>()
     var places = MutableLiveData<List<Place>>()
 
-    private val musicbrainzService = RetrofitProvider.createMusicbrainzService()
+    private var musicbrainzService = RetrofitProvider.createMusicbrainzService()
     private val searchStartHandler = Handler()
     private var searchText: String = ""
 
@@ -80,5 +80,10 @@ class MainActivityViewModel : ViewModel() {
             }
         }
         return emptyList()
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        musicbrainzService = null
     }
 }

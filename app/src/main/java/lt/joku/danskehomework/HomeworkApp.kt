@@ -3,8 +3,6 @@ package lt.joku.danskehomework
 import android.app.Application
 import com.carto.ui.MapView
 import com.facebook.stetho.Stetho
-import lt.joku.danskehomework.service.MusicbrainzService
-import lt.joku.danskehomework.service.RetrofitProvider
 
 
 /**
@@ -14,8 +12,6 @@ import lt.joku.danskehomework.service.RetrofitProvider
 
 class HomeworkApp: Application() {
 
-    lateinit var musicbrainzService: MusicbrainzService
-
     override fun onCreate() {
         super.onCreate()
         if (BuildConfig.DEBUG) initStetho()
@@ -24,8 +20,6 @@ class HomeworkApp: Application() {
         if (!isRegistered) {
             throw IllegalStateException("Carto map key expired")
         }
-
-        musicbrainzService = RetrofitProvider.createMusicbrainzService()
     }
 
     fun registerMapLicense() =

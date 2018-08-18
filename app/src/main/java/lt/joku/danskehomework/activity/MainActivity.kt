@@ -10,7 +10,7 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import lt.joku.danskehomework.R
 import lt.joku.danskehomework.databinding.ActivityMainBinding
-import lt.joku.danskehomework.service.MainActivityViewModelFactory
+import lt.joku.danskehomework.viewmodel.MainActivityViewModelFactory
 import lt.joku.danskehomework.service.MapService
 import lt.joku.danskehomework.service.MapServiceImpl
 import lt.joku.danskehomework.util.DeviceUtils

@@ -1,8 +1,7 @@
-package lt.joku.danskehomework.service
+package lt.joku.danskehomework.viewmodel
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
-import lt.joku.danskehomework.viewmodel.MainActivityViewModel
 
 class MainActivityViewModelFactory: ViewModelProvider.Factory {
 
